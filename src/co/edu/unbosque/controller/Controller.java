@@ -17,8 +17,18 @@ public class Controller {
 
     private void funcionar() {
 
+        String[] camino = grafo.caminoMinimo(grafo.getPosicion("bogota"), grafo.getPosicion("sincelejo")).split(";");
+        int aux = 0;
+        String end = "";
+        for (int i = 0; i < camino.length; i++) {
+            aux = Integer.parseInt(camino[i]);
+            end += grafo.getIndex(aux) + " - ";
+        }
 
-        System.out.println(grafo.mostarLista());
+        System.out.println(end);
+        System.out.println("el peso es : " + grafo.getPeso("bogota" , "yopal"));
 
     }
+
+
 }
