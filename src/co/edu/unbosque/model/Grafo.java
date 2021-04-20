@@ -268,7 +268,6 @@ public class Grafo {
 
         a = a.substring(0, a.length() - 1);
 
-        System.out.println(a);
         return a;
 
     }
